@@ -4,12 +4,15 @@
   "main": "src/server.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon",
-    "test": "jest"
+    "dev": "yarn docs:gen && nodemon",
+    "test": "jest",
+    "docs:gen": "node ./src/swagger.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "swagger-autogen": "^2.21.2",
+    "swagger-ui-express": "^4.4.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
